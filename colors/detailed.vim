@@ -488,7 +488,6 @@ hi ErrorMsg       term=standout ctermfg=15 ctermbg=1 guifg=White guibg=Red
 hi IncSearch      term=reverse cterm=reverse gui=reverse
 hi MoreMsg        term=bold ctermfg=121 gui=bold guifg=SeaGreen
 hi ModeMsg        term=bold cterm=bold gui=bold
-hi LineNr         term=underline ctermfg=11 guifg=Yellow
 hi CursorLineNr   term=bold ctermfg=11 gui=bold guifg=Yellow
 hi Question       term=standout ctermfg=121 gui=bold guifg=Green
 hi StatusLine     term=bold,reverse cterm=bold,reverse gui=bold,reverse
@@ -516,6 +515,7 @@ hi Underlined     term=underline cterm=underline ctermfg=81 gui=underline guifg=
 hi Ignore         ctermfg=0 guifg=bg
 hi Error          term=reverse ctermfg=15 ctermbg=9 guifg=White guibg=Red
 hi Todo           term=standout ctermfg=0 ctermbg=11 guifg=Blue guibg=Yellow
+call s:fg('LineNr', 'gray237')
 
 call s:fg('Comment', 'gray242') " In my books, comments should be quiet.
 " }}}
