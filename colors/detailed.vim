@@ -357,6 +357,7 @@ let s:c = {
   \'yellow190': 190,
   \'yellow220 (TODO: use this)': 220,
   \'yellow228': 228,
+  \'orangeyellow178': 178,
   \'orange208': 208,
   \'orange178': 178,
   \'orange180': 180,
@@ -516,6 +517,7 @@ hi Ignore         ctermfg=0 guifg=bg
 hi Error          term=reverse ctermfg=15 ctermbg=9 guifg=White guibg=Red
 hi Todo           term=standout ctermfg=0 ctermbg=11 guifg=Blue guibg=Yellow
 call s:fg('LineNr', 'gray237')
+call s:fgbg('CursorLine', 'orangeyellow178','gray232')
 
 call s:fg('Comment', 'gray242') " In my books, comments should be quiet.
 " }}}
