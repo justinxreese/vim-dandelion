@@ -516,7 +516,7 @@ hi Underlined     term=underline cterm=underline ctermfg=81 gui=underline guifg=
 hi Ignore         ctermfg=0 guifg=bg
 hi Error          term=reverse ctermfg=15 ctermbg=9 guifg=White guibg=Red
 hi Todo           term=standout ctermfg=0 ctermbg=11 guifg=Blue guibg=Yellow
-call s:fg('LineNr', 'gray237')
+call s:fgbg('LineNr', 'gray237', 'gray233')
 call s:fgbg('CursorLine', 'orangeyellow178','gray232')
 
 call s:fg('Comment', 'gray242') " In my books, comments should be quiet.
