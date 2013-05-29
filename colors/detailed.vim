@@ -359,6 +359,7 @@ let s:c = {
   \'yellow228': 228,
   \'orangeyellow178': 178,
   \'orange208': 208,
+  \'orange214': 214,
   \'orange178': 178,
   \'orange180': 180,
   \'orange222': 222,
@@ -479,7 +480,7 @@ endfun
 " For now, force darkness. If you're a big fan of white bg's, let me know, and
 " we can collaborate on a solution.
 set bg=dark
-call s:fgbg('Normal', 'gray254', 'gray232')
+call s:fgbg('Normal', 'gray249', 'gray232')
 
 " Basic/Default-like Palette {{{
 hi SpecialKey     term=bold ctermfg=81 guifg=Cyan
@@ -590,7 +591,8 @@ fun! s:detailed_colors()
 
   call s:bold_fg('detailedClass', 'purple126')
   call s:fg('detailedModule', 'purple126')
-  call s:fg('detailedDefine', 'green23')
+  " call s:fg('detailedDefine', 'green23')
+  call s:fg('detailedDefine', 'gray249')
   call s:fg('detailedInclude', 'purple53')
   call s:fg('detailedDeclaration', 'yellow100') " Originally for go lang
   call s:fg('detailedDeclType', 'green37') " Originally for go lang
@@ -641,7 +643,7 @@ fun! s:detailed_colors()
   call s:fg('detailedBlockExpression', 'orange180')
   " (conditionals)
   call s:fg('detailedControl', 'orange178')
-  call s:bold_fg('Conditional', 'basic8_yellow')
+  call s:bold_fg('Conditional', 'orange214')
   call s:bold_fg('detailedConditionalModifier', 'yellow148') " 'Yoda if'
   call s:fg('detailedConditionalExpression', 'light_yellow230')
   " (loops)
