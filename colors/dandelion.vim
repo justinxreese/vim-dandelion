@@ -54,7 +54,7 @@
 "
 "     :colo detailed
 
-let colors_name = 'detailed'
+let colors_name = 'dandelion'
 
 " Prevent any screwy setting from causing errors:
 let s:save_cpo = &cpo | set cpo&vim
@@ -354,12 +354,14 @@ let s:c = {
   \'yellow142 (TODO: use this)': 142,
   \'yellow148': 148,
   \'yellow149': 149,
+  \'yellow185': 185,
   \'yellow190': 190,
   \'yellow220 (TODO: use this)': 220,
   \'yellow228': 228,
   \'orangeyellow178': 178,
   \'orange208': 208,
   \'orange214': 214,
+  \'orange166': 166,
   \'orange178': 178,
   \'orange180': 180,
   \'orange222': 222,
@@ -480,7 +482,7 @@ endfun
 " For now, force darkness. If you're a big fan of white bg's, let me know, and
 " we can collaborate on a solution.
 set bg=dark
-call s:fgbg('Normal', 'gray249', 'gray232')
+call s:fgbg('Normal', 'gray253', 'gray232')
 
 " Basic/Default-like Palette {{{
 hi SpecialKey     term=bold ctermfg=81 guifg=Cyan
@@ -593,11 +595,11 @@ fun! s:detailed_colors()
   call s:fg('detailedModule', 'purple126')
   " call s:fg('detailedDefine', 'green23')
   call s:fg('detailedDefine', 'gray249')
-  call s:fg('detailedInclude', 'purple53')
+  call s:fg('detailedInclude', 'orange166')
   call s:fg('detailedDeclaration', 'yellow100') " Originally for go lang
   call s:fg('detailedDeclType', 'green37') " Originally for go lang
 
-  call s:bold_fg('detailedFunction', 'blue27')
+  call s:bold_fg('detailedFunction', 'blue33')
 
   call s:fg('detailedInstanceVariable', 'blue75')
 
@@ -638,7 +640,7 @@ fun! s:detailed_colors()
 
   " Blocks:
   " (basic)
-  call s:fg('detailedMethodBlock', 'green114')
+  call s:fg('detailedMethodBlock', 'yellow185')
   call s:fg('detailedBlock', 'purple225')
   call s:fg('detailedBlockExpression', 'orange180')
   " (conditionals)
@@ -733,9 +735,9 @@ fun! s:detailed_syntax_addtions()
   " E.g., shTodo overrides them, so it will need something like:
   " syn match   rubyComment   "#.*" contains=rubySharpBang,rubySpaceError,
   "     \rubyFirstAndSecondCommentLine,detailedTodo,detailedFixme,detailedXxx,@Spell
-  syn keyword detailedTodo TODO contained
-  syn keyword detailedFixme FIXME contained
-  syn keyword detailedXxx XXX contained
+  syn keyword detailedTodo 'TODO' contained
+  syn keyword detailedFixme 'FIXME' contained
+  syn keyword detailedXxx 'XXX' contained
 endfun
 call s:detailed_syntax_addtions() " Hrm, can this not be done with aucmd?
 
