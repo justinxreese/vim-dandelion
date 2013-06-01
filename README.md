@@ -1,3 +1,8 @@
+# Dandelion
+
+Based on the vim-detailed coloscheme. Until I write my own README, here is the
+original:
+
 # vim-detailed
 
 ![behaving](img/vim-detailed.png)
