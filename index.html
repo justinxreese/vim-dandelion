@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Vim-dandelion by justinxreese</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Vim-dandelion</h1>
+          <h2>Show subtler color variations than your basic palette-shifting color scheme</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/justinxreese/vim-dandelion/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/justinxreese/vim-dandelion/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/justinxreese/vim-dandelion" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a name="dandelion" class="anchor" href="#dandelion"><span class="octicon octicon-link"></span></a>Dandelion</h1>
+
+<p>Based on the vim-detailed coloscheme. Until I write my own README, here is the
+original:</p>
+
+<h1>
+<a name="vim-detailed" class="anchor" href="#vim-detailed"><span class="octicon octicon-link"></span></a>vim-detailed</h1>
+
+<p><img src="img/vim-detailed.png" alt="behaving"></p>
+
+<p>So many 256-color schemes merely shift the palette around, displaying only 8
+colors (even though they're a <em>different</em> set of 8 colors than default).</p>
+
+<p>This scheme is more detailed than that.</p>
+
+<p>Your eyes will learn to pick up on subtler patterns without requiring as
+much from your conscious mind.  Instead of the goal being merely looking
+cool, the goal is to maximize info bandwidth from the computer to the brain.
+The regexes, for example, are much easier to pick out. The overall feel of a
+given file becomes much more intuitively recognizeable (you'll know you're
+in foo.rb, not bar.rb, without having to read any text). Certain bits will
+"pop" into being the right colors, such as the difference between
+"RUBY_VERISON" and "RUBY_VERSION", or # encoding: utf-8</p>
+
+<h2>
+<a name="256-color-requirement" class="anchor" href="#256-color-requirement"><span class="octicon octicon-link"></span></a>256 Color Requirement</h2>
+
+<p>If you aren't getting 256 colors, you aren't getting detailed.vim.
+Typically, you'll have to make sure your <code>$TERM</code> variable is set right. This
+can get un-set by some programs, such as tmux. So you can force it to
+something like:</p>
+
+<pre><code>export TERM=screen-256color
+# or:
+export TERM=xterm-256color
+</code></pre>
+
+<p>If these are unavailable on the target system, you might have to place a
+terminfo file in <code>~/.terminfo/</code>  -or- you can be totally gross and force it
+with <code>:set &amp;t_Co=256</code> in vim. But don't be gross. It's uncouth.</p>
+
+<h2>
+<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h2>
+
+<p>If using Pathogen,</p>
+
+<pre><code> cd ~/.vim/bundle &amp;&amp; git clone https://github.com/rking/vim-detailed
+</code></pre>
+
+<p>If using no vim plugin manager:</p>
+
+<pre><code> mkdir -p ~/.vim/colors/ &amp;&amp; cd $_ &amp;&amp; wget https://raw.github.com/rking/vim-detailed/master/colors/detailed.vim
+</code></pre>
+
+<h2>
+<a name="setup" class="anchor" href="#setup"><span class="octicon octicon-link"></span></a>Setup</h2>
+
+<p>In your ~/.vimrc (or ~/.vim/plugin/colorscheme.vim if you like to organize):</p>
+
+<pre><code>colo detailed
+</code></pre>
+
+<p>This enables it globally. If you want to just do it for a trial, as long as
+you have done one of the steps in the "Download" section, above, you can do:</p>
+
+<pre><code>vim foo.rb +colo\ detailed
+</code></pre>
+
+<p>Or, from within vim:</p>
+
+<pre><code>:colo detailed
+</code></pre>
+
+<h2>
+<a name="language-support-so-far" class="anchor" href="#language-support-so-far"><span class="octicon octicon-link"></span></a>Language Support So Far</h2>
+
+<ul>
+<li>Ruby: 113 details detailed.</li>
+<li>C: 12 details detailed.</li>
+<li>Go: 10 details detailed.</li>
+<li>Diff: 10 details detailed.</li>
+<li>Javascript: 4 details detailed.</li>
+<li>Vim: 4 details detailed.</li>
+</ul><p>Note that for fully supported languages (Ruby), you get the whole experience of having the subtle color shades that fingerprint and lint the code when you glance at it.</p>
+
+<p>For the lesser grades mentioned above, you should get a bit more, but know that the <code>syntax/[yourlang].vim</code> has to have enough semantic parsing to make this possible. If you want to go further, you can certainly get a patch in that enhances the syntax parsing inside vim-detailed's <code>colors/detailed.vim</code> file.</p>
+
+<p>For all other languages, even the ones not listed above, you should at least get:</p>
+
+<ul>
+<li>Rainbow parens/brackets/curlies (which can be very helpful when the syntax gets deep)</li>
+<li>Quiet comments (grey, because "a comment is a lie waiting to happen")</li>
+<li>Strings with gray background (so it looks like a solid chunk)</li>
+<li>Muted colorcolumn (gray instead of GIANT LOUD RED)</li>
+<li>A color palette somewhat consistent with the detailed ones</li>
+</ul><h2>
+<a name="issues" class="anchor" href="#issues"><span class="octicon octicon-link"></span></a>Issues:</h2>
+
+<h1>
+<a name="rkingvim-detailed-open-issues" class="anchor" href="#rkingvim-detailed-open-issues"><span class="octicon octicon-link"></span></a>rking/vim-detailed open issues</h1>
+
+<p>13  More troubleshooting help? 3
+  11  Smart Here-docs 1
+   9  Detail Python [actual-user-request] 4
+   7  Handle t_Co != 256
+   6  Pygments Companion
+   3  Distinguish Foo and Bar of "class Foo &lt; Bar"</p>
+
+<h2>
+<a name="troubleshooting" class="anchor" href="#troubleshooting"><span class="octicon octicon-link"></span></a>Troubleshooting</h2>
+
+<p>This is wrong:</p>
+
+<p><img src="img/misbehaving-detailed.png" alt="misbehaving"></p>
+        </section>
+
+        <footer>
+          Vim-dandelion is maintained by <a href="https://github.com/justinxreese">justinxreese</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
