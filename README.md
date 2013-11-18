@@ -42,11 +42,11 @@ with `:set &t_Co=256` in vim. But don't be gross. It's uncouth.
 
  If using Pathogen,
 
-     cd ~/.vim/bundle && git clone https://github.com/rking/vim-detailed
+     cd ~/.vim/bundle && git clone https://github.com/justinxreese/vim-dandelion
 
  If using no vim plugin manager:
 
-     mkdir -p ~/.vim/colors/ && cd $_ && wget https://raw.github.com/rking/vim-detailed/master/colors/detailed.vim
+     mkdir -p ~/.vim/colors/ && cd $_ && wget https://raw.github.com/justinxreese/vim-dandelion/master/colors/detailed.vim
 
 ## Setup
 
