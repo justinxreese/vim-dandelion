@@ -85,17 +85,6 @@ For all other languages, even the ones not listed above, you should at least get
 - Muted colorcolumn (gray instead of GIANT LOUD RED)
 - A color palette somewhat consistent with the detailed ones
 
-## Issues:
-
-# rking/vim-detailed open issues
-  13  More troubleshooting help? 3
-  11  Smart Here-docs 1
-   9  Detail Python [actual-user-request] 4
-   7  Handle t_Co != 256
-   6  Pygments Companion
-   3  Distinguish Foo and Bar of "class Foo < Bar"
-
-
 ## Troubleshooting
 
 This is wrong:
