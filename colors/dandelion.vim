@@ -485,8 +485,8 @@ set bg=dark
 call s:fgbg('Normal', 'gray253', 'gray232')
 
 " Basic/Default-like Palette {{{
-hi SpecialKey     term=bold ctermfg=81 guifg=Cyan
-hi NonText        term=bold ctermfg=12 gui=bold guifg=Blue
+hi SpecialKey     term=bold ctermfg=81 guifg=DarkGrey
+hi NonText        term=bold ctermfg=12 gui=bold guifg=DarkGrey
 hi Directory      term=bold ctermfg=159 guifg=Cyan
 hi ErrorMsg       term=standout ctermfg=15 ctermbg=1 guifg=White guibg=Red
 hi IncSearch      term=reverse cterm=reverse gui=reverse
